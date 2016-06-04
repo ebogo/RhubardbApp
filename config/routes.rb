@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'users/index'
+
   root 'landing#index'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]

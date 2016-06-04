@@ -1,0 +1,26 @@
+<div class='jumbotron container-fluid text-center'>
+	<h1>Registration</h1>
+	<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+		<div clas='form'>
+		
+				<% if !flash[:error].blank? %>
+					<div class="alert alert-danger" role="alert">
+							<%= flash[:error]%>
+					</div>
+				<% end%>
+		
+	
+		<%= bootstrap_form_for(@user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+
+			<%= f.text_field :first, :label => "First" %>
+			<%= f.text_field :last, :label => "Last" %>
+			<%= f.email_field :email, :label => "E-mail"%>
+		
+			<%= f.submit "Submit"%>
+		<% end %>
+		</div>
+	</div>
+	
+</div>
+
+
