@@ -7,23 +7,22 @@
 	height: 100vh;
 	background:
 		linear-gradient(
-		rgba(0, 0, 0, 0.7), 
-		rgba(0, 0, 0, 0.7)
+		rgba(77, 255, 255, 0.5), 
+		rgba(077, 255, 255, 0.5)
     	), 
 		url('garden.jpg') no-repeat center center;
 	background-size: cover;
 }
 
-.main h1, p { 
+.main h1, .main p { 
 	color: white;
 }
 
 
-.cover-text { 
-	padding-top: 20vh;
+
+img {
+	max-height: 30em;
 }
-
-
 
 
 //Mobile

@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     # Save the object 
     if @user.save
     # If save succeeds, redirect to the index action 
-    flash[:notice] = "Thanks for your message."
+    flash[:notice] = "Thanks for joining!"
     redirect_to(:controller => 'landing', :action => 'index')
     else
     # If save fails, redisplay the form so user can fix problems
