@@ -15,6 +15,7 @@ end
 
 
 # Use SCSS for stylesheets
+gem 'font-awesome-sass'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap_form'

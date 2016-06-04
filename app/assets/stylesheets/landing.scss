@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$secondary: grey;
+
+
 
 .main {
 	height: 100vh;
@@ -14,16 +17,18 @@
 	background-size: cover;
 }
 
-.main h1, .main p { 
-	color: white;
-}
-
-
-
 img {
 	max-height: 30em;
 	max-width: 75%;
 }
+
+
+
+.main p, .main .fa{
+	color: black;
+}
+
+
 
 
 //Mobile
