@@ -3,10 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-#map {
-        height: 30em;
-      }
+.jumbotron {
+	min-height: 30em;
+}
 
+#map { 
+	height: 30em;
+	overflow: visible;
+}
 
 .navbar { 
 	background: rgba(255, 230, 204, 0.8) ;
@@ -54,10 +58,6 @@
 	border: black;
 }
 
-
-#map {
-      height: 100%;
-    }
 
 //Mobile
 @media (max-width: 480px) {
