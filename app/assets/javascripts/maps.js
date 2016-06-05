@@ -6,8 +6,9 @@
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 6
+    zoom: 13
   });
+  var myPos = {lat: 0, lng: 0};
   var infoWindow = new google.maps.InfoWindow({map: map});
 
   // Try HTML5 geolocation.
@@ -17,9 +18,9 @@ function initMap() {
         lat: position.coords.latitude,
         lng: position.coords.longitude
       };
-
+      myPos = pos;
       infoWindow.setPosition(pos);
-      infoWindow.setContent('Location found.');
+      infoWindow.setContent('You');
       map.setCenter(pos);
     }, function() {
       handleLocationError(true, infoWindow, map.getCenter());
@@ -28,6 +29,47 @@ function initMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Yard1</h1>'+
+      '<div id="bodyContent">'+
+      '<p>Go to <a href="test">'+
+      'yard\'s listing</a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker1 = new google.maps.Marker({
+    position: {lat: 51.04853, lng: -114.06199},
+    map: map,
+    title: 'Yard 1'
+  });
+  marker1.addListener('click', function() {
+    infowindow.open(map, marker1);
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: {lat: 51.054155, lng: -114.057312},
+    map: map,
+    title: 'Yard 2'
+  });
+  marker2.addListener('click', function() {
+    infowindow.open(map, marker2);
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: {lat: 51.054654, lng: -114.082224},
+    map: map,
+    title: 'Yard 3'
+  });
+  marker3.addListener('click', function() {
+    infowindow.open(map, marker3);
+  });
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
