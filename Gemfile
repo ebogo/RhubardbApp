@@ -7,6 +7,9 @@ gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 
 
+gem 'gmaps4rails'
+
+
 group :production do
   gem 'rails_12factor'
 end

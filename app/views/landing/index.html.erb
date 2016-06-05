@@ -1,27 +1,43 @@
+
+
+
 <div class="row row-1" id="top-content">
+	
 	<div class='jumbotron main text-center'>
+		<%= render(:partial => 'navbar')%>
 		<%=image_tag('rhubarbLogoTransparency.png')%> 
-		<p>Join the local food movement</p>
+		<br><br><p><strong>grow food with your neighbours</strong></p>
 		<a class='btn btn-primary' href='/users/new'>Grow</a>
 		<a class='btn btn-primary' href='/users/new'>Host</a><br><br>
 		<a class='scroll-link' href="#second-content"><i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i></a>
 		
+
 	</div>
 </div>
 
 
 <div class="row second-content-container">
-	<div class='jumbotron text-center'>
+	<div class='jumbotron container-fluid text-center'>
 		<h1>Mission</h1>
-		<p>Connecting local growers and land owners to advance the local food movement.</p>
-	
+		
+		
+	<div class="col-xs-8 col-xs-offset-2">
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+		
+		
+	</div>
+		
 	</div>
 </div>
 
 
 <div class="row third-content-container">
-	<div class='jumbotron text-center'>
-	
+	<div class='jumbotron container-fluid text-center'>
+		<h1>How it works</h1>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p><br>
+		<div class="col-xs-8 col-xs-offset-2">
+			<%=image_tag('map.png')%>
+		</div>
 	</div>
 </div>
 

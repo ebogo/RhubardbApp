@@ -2,26 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$secondary: grey;
 
+.navbar { 
+	background: rgba(255, 230, 204, 0.8) ;
+}
 
+.navbar-brand { 
+	padding-top: 0;
+}
+
+.navbar-toggle { 
+	background: blue;
+	border: white solid 1px;
+}
 
 .main {
 	height: 100vh;
 	background:
 		linear-gradient(
-		rgba(77, 255, 255, 0.5), 
-		rgba(077, 255, 255, 0.5)
+		rgba(255, 230, 204, 0.4), 
+		rgba(255, 230, 204, 0.4)
     	), 
-		url('garden.jpg') no-repeat center center;
+		url('imagePlants.png') no-repeat center center;
 	background-size: cover;
 }
 
-img {
+
+.jumbotron { 
+	padding-top: 0px;
+}
+
+.jumboton img {
+	margin-top: 10em;
 	max-height: 30em;
 	max-width: 75%;
 }
-
 
 
 .main p, .main .fa{
@@ -29,7 +44,15 @@ img {
 }
 
 
+.btn-primary { 
+	background: #b35900;
+	border: black;
+}
 
+
+#map {
+      height: 100%;
+    }
 
 //Mobile
 @media (max-width: 480px) {
