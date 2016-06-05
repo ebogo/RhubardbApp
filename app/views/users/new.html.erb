@@ -13,7 +13,7 @@
 				<% end%>
 		
 	
-		<%= bootstrap_form_for(@user, :url => {:controller => 'access', :action => 'login'}) do |f| %>
+		<%= bootstrap_form_for(@user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
 
 			<%= f.text_field :first, :label => "First" %>
 			<%= f.text_field :last, :label => "Last" %>

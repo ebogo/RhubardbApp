@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     else
     # If save fails, redisplay the form so user can fix problems
     flash[:error] = "Please correct the information below."
-    render('new')
+    render('/landing/index')
     end
   end
  

@@ -1,42 +1,89 @@
 
+        <div class="container container-fluid top-content">
+       
+        	<!-- garden submit -->
+        	<div class="container-fluid garden-submit">
+		        <div class="row">
+		            <div class="jumbotron">
+						<%=render(:partial => '/landing/logo')%>
+		            	
+		                <!-- garden calculator -->
+				        <div class="row cover-text text-center">
+							
+							<h1>Grow food with neighbours.</h1>
+							
+					       <br><br>
+						   
+						   <p>today & find out how</p>
+		   				
+						
+					
+							<% if !flash[:error].blank? %>
+			   					<div class="alert alert-danger alert-dismissible" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									    <span aria-hidden="true">&times;</span>
+									  </button>
+			   							<%= flash[:error]%>
+			   					</div>
+			   				<% end%>
+						   
+					   		<%= bootstrap_form_for(@user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+
+					   			<%= f.text_field :first, placeholder: "First", hide_label: true%>
+					   			<%= f.text_field :last, placeholder: "Last" , hide_label: true%>
+					   			<%= f.email_field :email, placeholder: "E-mail", hide_label: true%>
+		
+					   			<%= f.submit "Submit"%>
+					   		<% end %>
+					        </div>
+						
+						
+						
+						
+						<h2>[###,###.###] [km]<sup>2</sup> of urban garden is available near you!</h2>
+						<br><br>
+
+				       
+						
+					</div>
+				</div>
+			</div>
+			<!-- END garden submit -->  
+			
+		</div>         
+		
+		<!-- about the urban garden movement -->
+		<div class="row">
+			<h1>What is urban gardening about?</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel massa imperdiet, sodales eros id, pharetra elit. Nullam vel pellentesque purus, vel mollis risus. Nunc blandit eros a lacus iaculis, id sollicitudin nunc venenatis. Mauris bibendum turpis ligula. Suspendisse commodo neque vitae risus tempus luctus. Nunc volutpat vestibulum urna. Duis varius varius eleifend. Etiam efficitur blandit justo quis condimentum. Aliquam erat volutpat. Praesent sollicitudin lacinia metus nec dapibus. Maecenas finibus facilisis elit. Nam suscipit urna a imperdiet ullamcorper.</p>
+
+			<p>Phasellus rhoncus arcu sed tristique feugiat. Mauris faucibus neque sed porta ultrices. Nulla laoreet suscipit magna eget scelerisque. Aenean euismod egestas arcu a tempor. Morbi maximus nisi massa, dictum sollicitudin arcu ultrices vel. Donec consectetur a ligula et laoreet. Sed dapibus facilisis lectus in congue. Mauris euismod porta erat, a bibendum risus. Morbi ullamcorper leo nisi, in sodales quam iaculis interdum. Maecenas porta urna non ex fermentum, id varius eros viverra. Quisque enim tellus, commodo sed fringilla sit amet, sagittis eu ante. Nam eu vestibulum purus, sed lacinia leo. Duis facilisis massa id orci consectetur, eu fringilla lectus tempus.</p>
+
+			<p>Aliquam in tristique felis, nec tristique neque. Donec et quam ante. In maximus suscipit luctus. Quisque fringilla bibendum libero, ac hendrerit nunc pretium sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nisi, varius id pulvinar id, fringilla eu lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed vestibulum nisi hendrerit porttitor euismod. Aliquam nec purus nisl. Integer malesuada eros vitae sapien varius tincidunt. Proin non.</p>
+		</div>
 
 
-<div class="row row-1" id="top-content">
-	
-	<div class='jumbotron main text-center'>
-		<%= render(:partial => 'navbar')%>
-		<%=image_tag('rhubarbLogoTransparency.png')%> 
-		<br><br><p><strong>grow food with your neighbours</strong></p>
-		<a class='btn btn-primary' href='/users/new'>Grow</a>
-		<a class='btn btn-primary' href='/users/new'>Host</a><br><br>
-		<a class='scroll-link' href="#second-content"><i class="fa fa-angle-double-down fa-4x" aria-hidden="true"></i></a>
-		
-
-	</div>
-</div>
-
-
-<div class="row second-content-container">
-	<div class='jumbotron container-fluid text-center'>
-		<h1>Mission</h1>
-		
-		
-	<div class="col-xs-8 col-xs-offset-2">
-		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-		
-		
-	</div>
-		
-	</div>
-</div>
 
 
 <div class="row third-content-container">
 	<div class='jumbotron text-center'>
 		 <div id="map"></div>
 		 <script async defer
-		     src="https://maps.googleapis.com/maps/api/js?sensor=true&callback=initMap">
+			     src="https://maps.googleapis.com/maps/api/js?sensor=true&callback=initMap">
 		     </script>
 	</div>
 </div>
+
+
+				        <!-- garden email sign up -->
+			            <div class="row">
+			            	<div class="col-sm-12">
+			                	<div class="form-group">
+			                	
+			                        <%=render(:partial => '/landing/form')%>
+		                            
+			                	</div>
+			                </div>
+						</div>
+						<!-- END garden email sign up -->
 
