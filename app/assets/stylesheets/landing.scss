@@ -10,13 +10,26 @@ h1, h2, p {
 	font-family: 'Noticia Text', serif;
 }
 
+.btn-default {
+	background: #cf0235;
+	border: none;
+}
+
+.input { 
+	padding: 5px;
+}
 
 h1.logo-text {
 	color: white;
 }
 
+.nav-logo { 
+	margin-top: 20px;
+	position: relative;
+}
+
 .top-content { 
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
 	background:
 		linear-gradient(
