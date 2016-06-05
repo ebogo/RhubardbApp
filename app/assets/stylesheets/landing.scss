@@ -16,12 +16,15 @@
 	background: rgba(255, 230, 204, 0.8) ;
 }
 
-.navbar-brand { 
-	padding-top: 0;
+
+.navbar-brand img{ 
+	position: relative;
+	margin-top: -10px;
+	max-height: 30px;
 }
 
 .navbar-toggle { 
-	background: blue;
+	background: grey;
 	border: white solid 1px;
 }
 
